@@ -1,0 +1,85 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App{
+  max-width: 1000px;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+}
+.page{
+  margin: 10px;
+  display: flex;
+  flex-direction: column;  
+  gap: 8em;
+  background-color: rgb(255, 255, 255);
+}
+.top{
+  background: #ffffff;
+  width: fit-content;
+  margin: auto;
+  padding: 20px;
+}
+.top input{
+  width: 250px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.328);
+  background-color: rgb(247, 247, 247);
+  font-size: 1.2em;
+  margin: 15px;
+}
+.bottom{
+  background-color: rgb(255, 255, 255);
+  padding: 25px;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+table, td, th{
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+  text-align: end;
+}
+.each td{
+  padding: 20px 10px;
+  cursor:pointer;
+}
+th{
+  padding: 5px 10px;
+  font-size: small;
+  color: rgb(95, 95, 95);
+}
+.each:hover{
+  color: rgba(0, 0, 0, 0.362);
+  background-color: #f7f7f7;
+  transition: .3s;
+}
+.green{
+  color: green;
+}
+.red{
+  color: rgb(180, 1, 1);
+}
+  
+
+
