@@ -1,9 +1,9 @@
 import {useNavigate} from 'react-router-dom'
 
 export default function Element({rank, icon, name, symbol, priceUsd, percent24, mykey, id}){
-    
+    //https://assets.coincap.io/assets/icons/${symbol}@2x.png
     let navigate = useNavigate()
-
+    
     //String configuration
     const dot = priceUsd.indexOf(".")
     const dot2 = percent24.indexOf(".")
@@ -29,15 +29,15 @@ export default function Element({rank, icon, name, symbol, priceUsd, percent24, 
             newString += priceUsd[i]
         }
     }
-
+    const url = `https://assets.coincap.io/assets/icons/BTC@2x.png`
    
     return(
         <tr onClick={()=> navigate(`/info/${id}`)} key={mykey} className="each">
             <td className="rank">{rank}</td>
-            <td>{icon}</td>
+            <td><img src={url}></img></td>
             <td>
                 <span>{symbol} </span>
-                <span>{name}</span>
+                <span className='name'>{name}</span>
             </td>
             <td>U${newString}</td>
             {newString2[0] ==='-'

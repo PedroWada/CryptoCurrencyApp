@@ -74,6 +74,10 @@ th{
   background-color: #f7f7f7;
   transition: .3s;
 }
+.name{
+  font-size: 0.8em;
+  color: rgba(0, 0, 0, 0.64);
+}
 .green{
   color: green;
 }

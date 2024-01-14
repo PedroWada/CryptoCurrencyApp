@@ -7,34 +7,31 @@ export default function Home(){
 
 //https://api.coincap.io/v2/assets/bitcoin
 //https://api.coincap.io/v2/assets
-//https://assets.coincap.io/assets/icons/${symbol}@2x.png
 
-    const [coin, setCoin] = useState('')
+
     const url = 'https://api.coincap.io/v2/assets'
     const [listCryptos, setListCryptos] = useState([])
+    const [realList, setRealList] = useState([])
 
       useEffect(()=>{
         axios.get(url).then((resp)=>{
           setListCryptos(resp.data.data)
+          setRealList(resp.data.data)
         })
       }, [])
     
-    const search = (e) => {
-      if(e.key === 'Enter'){
-        axios.get(url + `/`+ coin.toLowerCase()).then((resp)=> {
-          setListCryptos([resp.data.data])
-        }).catch((err)=> {
-          window.alert('Erro!' + err)
-        })
-      }
-      }
+    function search(e){
+      setListCryptos(realList.filter((el)=> 
+        el.id.includes(e.target.value.toLowerCase())
+      )) 
+    }
       
 
     return(
         <div className="App">
         <div className='page'>
           <div className='top'>
-              <input type='text' placeholder='Enter CryptoCoin...' onKeyDown={search} onChange={(e) => setCoin(e.target.value)}/>
+              <input type='text' placeholder='Enter CryptoCoin...' onChange={(e) => search(e)}/>
           </div>
           <div className='bottom'>
             <div className='list'>
