@@ -5,7 +5,7 @@ export default function Table({list}){
     return(
         <table>
             <tbody>
-                <tr >
+                <tr>
                     <th>Rank</th>
                     <th>Icon</th>
                     <th>Crypto</th>

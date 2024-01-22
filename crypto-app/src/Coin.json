@@ -4,14 +4,15 @@
         "rank": "1",
         "symbol": "BTC",
         "name": "Bitcoin",
-        "supply": "19594193.0000000000000000",
-        "maxSupply": "21000000.0000000000000000",
-        "marketCapUsd": "896725075457.1284855210740474",
-        "volumeUsd24Hr": "17481020439.1297145967184572",
+        "supply": "19594193.0000000000000000 number of crypto currently", 
+        "maxSupply": "21000000.0000000000000000   maximum numbers of crypto possible",
+        "marketCapUsd": "896725075457.1284855210740474 How much money is in this crypto (price * supply)",
+        "volumeUsd24Hr": "17481020439.1297145967184572 total value of all crypto transactions within 24 hour",
         "priceUsd": "45764.8383608923565018",
         "changePercent24Hr": "-2.2111664609775217",
-        "vwap24Hr": "46532.9851979333584924",
+        "vwap24Hr": "46532.9851979333584924 the average price in 24 hour",
         "explorer": "https://blockchain.info/"
     },
     "timestamp": 1704849399805
+    
 }

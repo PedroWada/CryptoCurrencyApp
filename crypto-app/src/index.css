@@ -84,6 +84,22 @@ th{
 .red{
   color: rgb(180, 1, 1);
 }
-  
+
+.grid_container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  gap: 5px;
+}
+.grid_item{
+  padding: 20px;
+  text-align: center;
+}
+.top2{
+  background: #ffffff;
+  width: fit-content;
+  margin: 70px auto;
+  padding: 30px;
+}
 
 

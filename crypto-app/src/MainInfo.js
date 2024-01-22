@@ -13,20 +13,35 @@ export default function MainInfo(){
         })
     }, [name])
 
+    function formating(str) {
+        return parseFloat(str).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')
+    }
+
     return(
         <div>
             <Link to='/'>&#8592; Back</Link>
-            <p>{data?.rank}</p>
-            <p>{data?.symbol}</p>
-            <p>{data?.name}</p>
-            <p>{data?.supply}</p>
-            <p>{data?.maxSupply}</p>
-            <p>{data?.marketCapUsd}</p>
-            <p>{data?.volumeUsd24Hr}</p>
-            <p>{data?.priceUsd}</p>
-            <p>{data?.changePercent24Hr}</p>
-            <p>{data?.vwap24Hr}</p>
-            <p>{data?.explorer}</p>
+            <div className="top2">
+                <h1>X</h1>
+                <p>{data?.symbol}</p>
+            </div>
+           
+            
+            <div className="bottom">
+                <div className="grid_container">
+                    <p className="grid_item">Abbreviation: {data?.symbol}</p>
+                    <p className="grid_item">Name: {data?.name}</p>
+                    <p className="grid_item">Supply: {formating(data?.supply)}</p>
+                    {data?.maxSupply !== null ?
+                        <p className="grid_item">Max Supply: {formating(data?.maxSupply)}</p>
+                    :<p className="grid_item">Max Supply: Infinty</p>}
+                    
+                    <p className="grid_item">Market Cap: {formating(data?.marketCapUsd)}</p>
+                    <p className="grid_item">Volume 24hr: {formating(data?.volumeUsd24Hr)}</p>
+                    <p className="grid_item">Price: {data?.priceUsd}</p>
+                    <p className="grid_item">Change Percent: {data?.changePercent24Hr}</p>
+                    <p className="grid_item">Volume-Weighted Average: {data?.vwap24Hr}</p>
+                </div>
+            </div>
 
         </div>
         
