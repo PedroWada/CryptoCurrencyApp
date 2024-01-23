@@ -14,13 +14,13 @@ export default function Table({list}){
                 </tr>
                 
                 {list.map((el,i)=> {
-                    
+                const imageUrl = `https://assets.coincap.io/assets/icons/${el.symbol.toLowerCase()}@2x.png`
                     return(
                         <Element 
                         id={el.id}
                         key={i} 
                         rank={el.rank} 
-                        icon={'X'}
+                        icon={imageUrl}
                         name={el.name}
                         symbol={el.symbol} 
                         priceUsd={el.priceUsd}  

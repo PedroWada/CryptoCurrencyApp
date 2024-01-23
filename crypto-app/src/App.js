@@ -4,7 +4,6 @@ import MainInfo from './MainInfo';
 
 function App() {
 
-
   return (
     <div className="App">
     <BrowserRouter>

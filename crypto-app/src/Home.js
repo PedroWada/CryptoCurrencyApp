@@ -7,7 +7,7 @@ export default function Home(){
 
 //https://api.coincap.io/v2/assets/bitcoin
 //https://api.coincap.io/v2/assets
-//`https://assets.coincap.io/assets/icons/BTC@2x.png`
+//https://assets.coincap.io/assets/icons/BTC@2x.png
 
     const url = 'https://api.coincap.io/v2/assets'
     const [listCryptos, setListCryptos] = useState([])
@@ -26,17 +26,17 @@ export default function Home(){
       )) 
     }
       
-
     return(
-        
         <div className='page'>
           <div className='top'>
               <input type='text' placeholder='Enter CryptoCoin...' onChange={(e) => search(e)}/>
           </div>
+          
           <div className='bottom'>
-            <div className='list'>
-              <Table list={listCryptos}/>
-            </div>
+            <h1>Top 100 Cryptos</h1>
+              <div className='list'>
+                <Table list={listCryptos}/>
+              </div>
           </div>
         </div>
     

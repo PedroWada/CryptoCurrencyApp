@@ -16,11 +16,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+body{
+  background-color: rgb(0, 5, 50);
+  color: white;
+}
 .App{
   max-width: 1000px;
   margin: auto;
-  background-color: rgb(255, 255, 255);
   padding: 10px;
 }
 .page{
@@ -28,10 +30,9 @@ code {
   display: flex;
   flex-direction: column;  
   gap: 8em;
-  background-color: rgb(255, 255, 255);
+ 
 }
 .top{
-  background: #ffffff;
   width: fit-content;
   margin: auto;
   padding: 20px;
@@ -41,13 +42,16 @@ code {
   height: 50px;
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.328);
-  background-color: rgb(247, 247, 247);
+  border: 1px solid rgba(255, 255, 255, 0.741);
+  color: white;
+  background-color: #ffffff3b;
   font-size: 1.2em;
   margin: 15px;
 }
+.top input::placeholder{
+  color: rgba(255, 255, 255, 0.775);
+}
 .bottom{
-  background-color: rgb(255, 255, 255);
   padding: 25px;
 }
 .list{
@@ -56,7 +60,7 @@ code {
   padding: 20px;
 }
 table, td, th{
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid rgb(255, 255, 255);
   border-collapse: collapse;
   text-align: end;
 }
@@ -67,39 +71,86 @@ table, td, th{
 th{
   padding: 5px 10px;
   font-size: small;
-  color: rgb(95, 95, 95);
+  color: rgba(211, 211, 211, 0.821);
 }
 .each:hover{
-  color: rgba(0, 0, 0, 0.362);
-  background-color: #f7f7f7;
+  color: rgba(198, 198, 198, 0.821);
+  background-color: rgb(2, 10, 78);
   transition: .3s;
 }
 .name{
   font-size: 0.8em;
-  color: rgba(0, 0, 0, 0.64);
+  color: rgba(255, 255, 255, 0.769);
 }
 .green{
-  color: green;
+  color: rgb(9, 197, 9);
 }
 .red{
-  color: rgb(180, 1, 1);
+  color: rgb(228, 22, 22);
 }
 
 .grid_container{
   display: grid;
   grid-template-columns: auto auto auto;
-  padding: 10px;
+  
   gap: 5px;
+  font-size: 1.1em;
 }
 .grid_item{
   padding: 20px;
   text-align: center;
 }
 .top2{
-  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
   width: fit-content;
   margin: 70px auto;
-  padding: 30px;
+}
+.top2 p {
+  font-size: 1.2em;
+}
+button{
+  padding: 10px;
+  border-radius: 10px;
+  width: 150px;
+  cursor: pointer;
+  font-size: 1.2em;
+  background-color: #ffffff6d;
+  color: white;
+  border: 1px solid rgb(255, 255, 255);
+  box-shadow: 3px 3px 5px black;
+}
+button:hover{
+  background-color: #ffffff88;
+}
+.header{
+  padding: 25px;
+}
+.crypto_icon{
+  width: 30px;
+}
+.crypto_image{
+  width: 120px;
+}
+.loader {
+  border: 10px solid #cacaca2c;
+  border-radius: 50%;
+  border-top: 10px solid #ffffff;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
 }
 
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

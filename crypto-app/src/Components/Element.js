@@ -5,43 +5,38 @@ export default function Element({rank, icon, name, symbol, priceUsd, percent24, 
     let navigate = useNavigate()
     
     //String configuration
-    const dot = priceUsd.indexOf(".")
-    const dot2 = percent24.indexOf(".")
-    let newString = ''
-    let newString2 = ''
-    for(let i = 0; i < dot2+5; i++){
-        newString2 += percent24[i]
-    }
-    if(priceUsd[0] === '0'){
-        for(let i = 0; i < priceUsd.length; i++ ){
-            if(priceUsd[i] === '0' || priceUsd[i] === '.'){
-                newString += priceUsd[i]
+    function formating(str, nmr){
+        let newString = ''
+        if(str[0] === '0'){
+            for(let i = 0; i < 8; i++ ){
+                if(str[i] === '0' || str[i] === '.'){
+                    newString += str[i]
+                }
+                else{
+                    newString +=str[i]
+                    newString +=str[i+1]
+                    newString +=str[i+2]
+                    break;
+                }
             }
-            else{
-                newString +=priceUsd[i]
-                newString +=priceUsd[i+1]
-                newString +=priceUsd[i+2]
-                break;
-            }
+        }else{
+           newString = parseFloat(str).toFixed(nmr).replace(/\d(?=(\d{3})+\.)/g, '$&,')
         }
-    }else{
-        for(let i = 0; i < dot+4; i++){
-            newString += priceUsd[i]
-        }
+       return newString
     }
    
     return(
         <tr onClick={()=> navigate(`/info/${id}`)} key={mykey} className="each">
             <td className="rank">{rank}</td>
-            <td>{icon}</td>
+            <td><img className='crypto_icon' src={icon} alt={ name +' Icon'}/></td>
             <td>
                 <span>{symbol} </span>
                 <span className='name'>{name}</span>
             </td>
-            <td>U${newString}</td>
-            {newString2[0] ==='-'
-            ? <td className="red">{newString2}%</td>
-            :<td className="green">+{newString2}%</td>}
+            <td>U${formating(priceUsd, 2)}</td>
+            {percent24[0] ==='-'
+            ? <td className="red">{formating(percent24, 3)}%</td>
+            :<td className="green">+{formating(percent24, 3)}%</td>}
         </tr>
     )
 }
