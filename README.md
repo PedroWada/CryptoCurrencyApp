@@ -25,4 +25,4 @@ And when you click the coin you want, you are redirected to this page with its i
 <li>Api fetching</li>
 
 # Setup
-Download or clone repository. Open the terminal, change directory to crypto-app and run "npm start".
+Download or clone repository. Open the terminal and run "npm start".
