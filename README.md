@@ -1,5 +1,5 @@
 # CryptoCurrencyApp
-This is a website where you can se the top 100 cryptocurrency in this exact moment. You are able to search the coin you want and you can click in the coin. When you click you can see more info about what you clicked.
+This is a website where you can see the top 100 cryptocurrency in this exact moment. You are able to search the coin you want and you can click in the coin. When you click you can see more info about what you clicked.
 
 # Screenshots
 
@@ -25,4 +25,4 @@ And when you click the coin you want, you are redirected to this page with its i
 <li>Api fetching</li>
 
 # Setup
-Download or clone repository. Open the terminal, change directory to crypto-app and run "npm start".
+Download or clone repository. Open the terminal and run "npm start".
