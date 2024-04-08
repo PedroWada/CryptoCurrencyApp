@@ -23,7 +23,7 @@ export default function MainInfo(){
     return(
         <div>
             <div className="header">
-                <Link to='/'>
+                <Link to='/CryptoCurrencyApp'>
                     <button>&#8592; Back</button>
                 </Link>
             </div>

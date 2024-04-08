@@ -26,7 +26,7 @@ export default function Element({rank, icon, name, symbol, priceUsd, percent24, 
     }
    
     return(
-        <tr onClick={()=> navigate(`/info/${id}`)} key={mykey} className="each">
+        <tr onClick={()=> navigate(`/CryptoCurrencyApp/info/${id}`)} key={mykey} className="each">
             <td className="rank">{rank}</td>
             <td><img className='crypto_icon' src={icon} alt={ name +' Icon'}/></td>
             <td>
